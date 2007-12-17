@@ -11,7 +11,6 @@ Release:	%release
 License:	GPL
 Group:		System/Libraries
 URL:		http://starship.python.net/~gward/mpeglib/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 Source0:	ftp://ftp.mni.mcgill.ca/pub/mpeg/%{name}-%{version}.tar.bz2
 Patch1:		libmpeg1-1.3.1-debian.diff.bz2
