@@ -85,15 +85,15 @@ make
 make shlib
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -D -m 644 libmpeg.so.1.3.1 $RPM_BUILD_ROOT%{_libdir}/libbmpeg.so.1.3.1
-install -D -m 644 libmpeg.a $RPM_BUILD_ROOT%{_libdir}/libbmpeg.a
-install -D -m 644 mpeg.h $RPM_BUILD_ROOT%{_includedir}/bmpeg.h
-/sbin/ldconfig -n $RPM_BUILD_ROOT%{_libdir}
-ln -s libbmpeg.so.1 $RPM_BUILD_ROOT%{_libdir}/libbmpeg.so
+rm -rf %{buildroot}
+install -D -m 644 libmpeg.so.1.3.1 %{buildroot}%{_libdir}/libbmpeg.so.1.3.1
+install -D -m 644 libmpeg.a %{buildroot}%{_libdir}/libbmpeg.a
+install -D -m 644 mpeg.h %{buildroot}%{_includedir}/bmpeg.h
+/sbin/ldconfig -n %{buildroot}%{_libdir}
+ln -s libbmpeg.so.1 %{buildroot}%{_libdir}/libbmpeg.so
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
