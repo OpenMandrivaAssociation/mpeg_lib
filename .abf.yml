@@ -1,2 +1,4 @@
 sources:
-  "mpeg_lib-1.3.1.tar.bz2:"	6f4b3844768645b0aa3efff082d349f554c8b7f3
+  "libmpeg1-1.3.1-debian.diff.bz2": dcdb68bfac46f63fe5c8f926b94c675d15c64ba6
+  "mpeg_lib-1.3.1-bad_cast.patch.bz2": 5af27754ff4cb7d4bc7a1a1d2ae6ca3c286061e2
+  "mpeg_lib-1.3.1.tar.bz2": 6f4b3844768645b0aa3efff082d349f554c8b7f3
