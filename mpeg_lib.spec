@@ -1,11 +1,12 @@
 %define major	1
 %define libname %mklibname bmpeg %{major}
 %define devname %mklibname bmpeg -d
+%define staticname %mklibname bmpeg -d -s
 
 Summary:	Mpeg library
 Name:		mpeg_lib
 Version:	1.3.1
-Release:	25
+Release:	26
 License:	GPLv2
 Group:		System/Libraries
 Url:		http://starship.python.net/~gward/mpeglib/
@@ -49,7 +50,15 @@ Provides:	%{name}-devel = %{version}-%{release}
 Provides:	libbmpeg-devel = %{version}-%{release}
 
 %description	-n %{devname}
-This package contains static libraries and header files need for development.
+This package contains header files need for development.
+
+%package	-n %{staticname}
+Summary:	Static BMpeg library
+Group:		Development/C
+Requires:	%{devname} = %{EVRD}
+
+%description	-n %{staticname}
+This package contains static libraries of bmpeg.
 
 %prep
 %setup -q
@@ -74,8 +83,8 @@ ln -s libbmpeg.so.1 %{buildroot}%{_libdir}/libbmpeg.so
 
 %files -n %{devname}
 %doc doc/*
-%doc README CHANGES
-%{_libdir}/*.a
 %{_libdir}/*.so
 %{_includedir}/*
 
+%files -n %{staticname}
+%{_libdir}/*.a
