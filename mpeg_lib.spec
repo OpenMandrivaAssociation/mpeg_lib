@@ -6,7 +6,7 @@
 Summary:	Mpeg library
 Name:		mpeg_lib
 Version:	1.3.1
-Release:	29
+Release:	30
 License:	GPLv2
 Group:		System/Libraries
 Url:		http://starship.python.net/~gward/mpeglib/
