@@ -2,6 +2,7 @@
 %define libname %mklibname bmpeg %{major}
 %define devname %mklibname bmpeg -d
 %define staticname %mklibname bmpeg -d -s
+%define debug_package %{nil}
 
 Summary:	Mpeg library
 Name:		mpeg_lib
@@ -65,6 +66,7 @@ This package contains static libraries of bmpeg.
 %apply_patches
 
 %build
+export CC=gcc
 export OPTIMIZE="%{optflags} -fPIC"
 %configure
 
