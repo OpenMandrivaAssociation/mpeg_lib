@@ -10,7 +10,7 @@ Version:	1.3.1
 Release:	33
 License:	GPLv2
 Group:		System/Libraries
-Url:		http://starship.python.net/~gward/mpeglib/
+Url:		https://starship.python.net/~gward/mpeglib/
 Source0:	ftp://ftp.mni.mcgill.ca/pub/mpeg/%{name}-%{version}.tar.bz2
 Patch1:		libmpeg1-1.3.1-debian.diff.bz2
 Patch2:		mpeg_lib-1.3.1-bad_cast.patch.bz2 
